@@ -1,6 +1,8 @@
+# nginx-proxy-dotnet
+
 ## Instructions
 
-### ASP.NET Core App
+#### Create Docker image for ASP.NET Core App
 
 ```
 git clone https://github.com/gentisaliu/playground.git
@@ -13,22 +15,22 @@ dotnet run
 ```
 
 ```
-dotnet publish -o published
+dotnet publish -c Release -o published
 docker build -t aspnetapp .
 docker run -d -p 8181:80 aspnetapp
 ```
 
-### nginx-proxy-dotnet/aspnetapp
+#### Create Docker image for nginx
 
 ```
 docker build -t nginx-proxy .
-docker run -d -p 
+docker run -d -p 8080:80 nginx-proxy
 ```
 
 ## Sources
 
-- https://stormpath.com/blog/tutorial-deploy-asp-net-core-on-linux-with-docker
-- https://docs.microsoft.com/en-us/aspnet/core/publishing/linuxproduction
-- https://docs.docker.com/get-started/
-- https://github.com/dotnet/dotnet-docker-samples
-- https://hub.docker.com/_/nginx/
+- [Tutorial: Deploy an ASP.NET Core Application on Linux with Docker](https://stormpath.com/blog/tutorial-deploy-asp-net-core-on-linux-with-docker)
+- [Set up a hosting environment for ASP.NET Core on Linux with Nginx, and deploy to it](https://docs.microsoft.com/en-us/aspnet/core/publishing/linuxproduction)
+- [Docker: Getting Started](https://docs.docker.com/get-started/)
+- [.NET Core Docker Samples](https://github.com/dotnet/dotnet-docker-samples)
+- [library/nginx at Docker Hub](https://hub.docker.com/_/nginx/)
