@@ -34,3 +34,4 @@ docker run -d -p 8080:80 nginx-proxy
 - [Docker: Getting Started](https://docs.docker.com/get-started/)
 - [.NET Core Docker Samples](https://github.com/dotnet/dotnet-docker-samples)
 - [library/nginx at Docker Hub](https://hub.docker.com/_/nginx/)
+- [jwilder/nginx-proxy](https://github.com/jwilder/nginx-proxy)
