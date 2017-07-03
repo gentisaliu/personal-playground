@@ -1,12 +1,10 @@
-version: '2'
+version: '3'
 
 services:
   nginx-proxy:
     build: nginx
     ports:
       - "8080:80"
-    volumes:
-      - /var/run/docker.sock:/tmp/docker.sock:ro
     depends_on:
       - api
 
@@ -14,5 +12,3 @@ services:
     build: aspnetapp
     ports:
       - "8181:80"
-    volumes:
-      - /var/run/docker.sock:/tmp/docker.sock:ro
