@@ -35,4 +35,6 @@ docker run -d -p 8080:80 nginx-proxy
 - [.NET Core Docker Samples](https://github.com/dotnet/dotnet-docker-samples)
 - [library/nginx at Docker Hub](https://hub.docker.com/_/nginx/)
 - [jwilder/nginx-proxy](https://github.com/jwilder/nginx-proxy)
+- [How To Containerize and Use Nginx as a Proxy](https://www.digitalocean.com/community/tutorials/docker-explained-how-to-containerize-and-use-nginx-as-a-proxy)
 - [Understanding Nginx HTTP Proxying, Load Balancing, Buffering, and Caching](https://www.digitalocean.com/community/tutorials/understanding-nginx-http-proxying-load-balancing-buffering-and-caching)
+- [Docker Volumes and Networks with Compose](https://www.linux.com/learn/docker-volumes-and-networks-compose)
