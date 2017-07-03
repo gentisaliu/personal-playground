@@ -27,7 +27,7 @@ docker build -t nginx-proxy .
 docker run -d -p 8080:80 nginx-proxy
 ```
 
-## References
+## Resources
 
 - [Tutorial: Deploy an ASP.NET Core Application on Linux with Docker](https://stormpath.com/blog/tutorial-deploy-asp-net-core-on-linux-with-docker)
 - [Set up a hosting environment for ASP.NET Core on Linux with Nginx, and deploy to it](https://docs.microsoft.com/en-us/aspnet/core/publishing/linuxproduction)
@@ -39,3 +39,4 @@ docker run -d -p 8080:80 nginx-proxy
 - [Understanding Nginx HTTP Proxying, Load Balancing, Buffering, and Caching](https://www.digitalocean.com/community/tutorials/understanding-nginx-http-proxying-load-balancing-buffering-and-caching)
 - [Docker Volumes and Networks with Compose](https://www.linux.com/learn/docker-volumes-and-networks-compose)
 - [Networking in Compose](https://docs.docker.com/compose/networking)
+- http://blog.nbellocam.me/2016/03/10/letsencrypt-and-nginx-on-docker/
