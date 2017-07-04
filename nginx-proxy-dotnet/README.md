@@ -31,7 +31,7 @@ docker-compose build
 docker-compose up
 ```
 
-5. Done. The original ASP.NET Core application should be running at `http://localhost:8181/api/values`, the proxied one at `https://localhost:8080/aspnetapi` or `https://localhost/aspnetapi` respectively.
+5. Done. The original ASP.NET Core application can be found at `http://localhost:8181/api/values`, the proxied one at `http://localhost:8080/aspnetapi` or `https://localhost/aspnetapi` respectively.
 
 ## Resources
 
