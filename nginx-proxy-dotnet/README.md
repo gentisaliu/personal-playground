@@ -16,6 +16,8 @@ git clone https://github.com/gentisaliu/playground.git
 cd playground/nginx-proxy-dotnet/aspnetapp
 ```
 
+3. 
+
 #### Create Docker image for ASP.NET Core App
 
 ```
