@@ -1,6 +1,20 @@
 # nginx-proxy-dotnet
 
-## Instructions
+Uses the Docker Compose tool to set up an ASP.NET Core application container running on the Kestrel web server and places it behind a Nginx-based reverse-proxy server with SSL support, which runs in a separate container.
+
+## Getting Started
+
+1. Clone the repository:
+
+```
+git clone https://github.com/gentisaliu/playground.git
+```
+
+2. `cd` to project folder:
+
+```
+cd playground/nginx-proxy-dotnet/aspnetapp
+```
 
 #### Create Docker image for ASP.NET Core App
 
@@ -39,4 +53,5 @@ docker run -d -p 8080:80 nginx-proxy
 - [Understanding Nginx HTTP Proxying, Load Balancing, Buffering, and Caching](https://www.digitalocean.com/community/tutorials/understanding-nginx-http-proxying-load-balancing-buffering-and-caching)
 - [Docker Volumes and Networks with Compose](https://www.linux.com/learn/docker-volumes-and-networks-compose)
 - [Networking in Compose](https://docs.docker.com/compose/networking)
-- http://blog.nbellocam.me/2016/03/10/letsencrypt-and-nginx-on-docker/
+- [Using letsencrypt with nginx on docker](http://blog.nbellocam.me/2016/03/10/letsencrypt-and-nginx-on-docker)
+- [Host ASP.NET Core on Linux with Nginx](https://docs.microsoft.com/en-us/aspnet/core/publishing/linuxproduction)
