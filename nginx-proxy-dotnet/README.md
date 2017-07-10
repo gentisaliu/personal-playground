@@ -20,6 +20,7 @@ cd playground/nginx-proxy-dotnet
 
 ```
 cd aspnetapp
+dotnet restore
 dotnet publish -c Release -o published
 ```
 
