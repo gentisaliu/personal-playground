@@ -1,0 +1,19 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: nginx
+  annotations:
+    kubernetes.io/tls-acme: 'true'
+spec:
+  rules:
+  - host: 3d50916d.ngrok.io
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: nginx
+          servicePort: 80
+  tls:
+  - hosts:
+    - 3d50916d.ngrok.io
+    secretName: nginx-tls
