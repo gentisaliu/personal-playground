@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-svc
+  namespace: nginx-letsencrypt-demo
+  labels:
+    app: nginx
+spec:
+  type: LoadBalancer
+  loadBalancerIP: 130.211.78.189
+  ports:
+  - port: 80
+    targetPort: 80
+    protocol: TCP
+  selector:
+    app: nginx

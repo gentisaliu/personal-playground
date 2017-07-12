@@ -1,0 +1,21 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: nginx-ingress
+  namespace: nginx-letsencrypt-demo
+  annotations:
+    kubernetes.io/tls-acme: "true"
+    kubernetes.io/ingress.class: "gce"
+spec:
+  tls:
+  - hosts:
+    - labmicroservices1.hopto.org
+    secretName: nginx-letsencrypt-demo-secret
+  rules:
+  - host: labmicroservices1.hopto.org
+    http:
+      paths:
+      - path: /*
+        backend:
+          serviceName: nginx-svc
+          servicePort: 80

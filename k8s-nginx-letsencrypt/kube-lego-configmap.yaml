@@ -1,0 +1,8 @@
+piVersion: v1
+metadata:
+  name: kube-lego
+  namespace: kube-system
+data:
+  lego.email: gentisaliu@gmail.com
+  lego.url: https://acme-v01.api.letsencrypt.org/directory
+kind: ConfigMap
