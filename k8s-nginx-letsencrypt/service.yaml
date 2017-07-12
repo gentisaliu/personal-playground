@@ -6,8 +6,7 @@ metadata:
   labels:
     app: nginx
 spec:
-  type: LoadBalancer
-  loadBalancerIP: 130.211.78.189
+  type: NodePort
   ports:
   - port: 80
     targetPort: 80
