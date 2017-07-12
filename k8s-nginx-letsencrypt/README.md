@@ -12,7 +12,9 @@ It exposes an nginx deployment using a service and creates an ingress controller
 gcloud compute addresses create nginx-letsencrypt-demo-static-ip --global
 ```
 
-2. The sample uses the hostname `labmicroservices1.hopto.org`. To use a different one, change this in `ingress-tls.yaml` and make sure to register this hostname with a DNS, in order for Let'sEncrypt to be able to resolve the domain.
+The created IP named `nginx-letsencrypt-demo-static-ip` is referred to in `ingress-tls.yaml`.
+
+2. The sample uses the hostname `labmicroservices1.hopto.org`. To use a different one, change this in `ingress-tls.yaml` and make sure to register this hostname with a DNS so that Let'sEncrypt can resolve it.
 
 3. Create K8s resources:
 
