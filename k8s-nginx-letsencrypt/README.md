@@ -2,13 +2,15 @@
 
 This repository contains deployment manifests aimed at Kubernetes clusters running on Google Container Engine (GCE), that use [`kube-lego`](https://github.com/jetstack/kube-lego) to automatically request certificates from Let's Encrypt.
 
-It exposes an nginx deployment using a service and uses an ingress controller to point at the service. The Ingress resource creates an HTTP(S) load balancer, which terminates TLS through `kube-lego`.
+It exposes an nginx deployment using a service and creates an ingress controller to point at the service. The Ingress resource creates an HTTP(S) load balancer, which terminates TLS through `kube-lego`.
 
 ## Getting Started
 
 1. Register a static IP with GCE:
 
-`gcloud compute addresses create nginx-letsencrypt-demo-static-ip --global`
+```
+gcloud compute addresses create nginx-letsencrypt-demo-static-ip --global
+```
 
 2. The sample uses the hostname `labmicroservices1.hopto.org`. To use a different one, change this in `ingress-tls.yaml` and make sure to register this hostname with a DNS, in order for Let'sEncrypt to be able to resolve the domain.
 
@@ -23,7 +25,7 @@ kubectl create -f service.yaml
 kubectl create -f ingress-tls.yaml
 ```
 
-4. If everything worked out, you should be able to view nginx's welcome page at http://labmicroservices1.hopto.org and https://labmicroservices1.hopto.org.
+4. If everything worked out, you should be able to see nginx's welcome page at http://labmicroservices1.hopto.org and https://labmicroservices1.hopto.org.
 
 ## Delete Resources
 
