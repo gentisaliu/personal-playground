@@ -32,9 +32,12 @@ kubectl create -f ingress-tls.yaml
 ## Delete Resources
 
 ```
-kubectl --namespace=nginx-letsencrypt-demo delete ingress nginx-ingress
+kubectl --namespace=nginx-letsencrypt-demo delete ingress nginx-ingress 
 kubectl --namespace=nginx-letsencrypt-demo delete service nginx
 kubectl --namespace=nginx-letsencrypt-demo delete deployment nginx
+kubectl --namespace=kube-system delete deployment kube-lego 
+kubectl --namespace=kube-system delete configmap kube-lego 
+kubectl delete namespace nginx-letsencrypt-demo
 ```
 
 ## References
