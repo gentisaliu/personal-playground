@@ -2,7 +2,7 @@
 
 This demo places an ASP.NET Core application behind an nginx-based reverse-proxy server.
 
-The proxy makes the application available through both a secured and an unsecured connection. The used certificates are, for demo purposes, self-signed.
+The proxy serves the application through a secured and an unsecured connection. The used certificates are, for demo purposes, self-signed.
 
 ## Getting Started
 

@@ -1,8 +1,8 @@
 # k8s-nginx-letsencrypt
 
-This repository contains deployment manifests aimed at Kubernetes clusters running on Google Container Engine (GCE), that use [`kube-lego`](https://github.com/jetstack/kube-lego) to automatically request certificates from Let's Encrypt.
+This demo shows how to automatically renew Let's Encrypt certificates for a Kubernetes service running on Google Container Engine (GCE).
 
-It exposes an nginx deployment using a service and creates an ingress controller to point at the service. The Ingress resource creates an HTTP(S) load balancer, which terminates TLS through `kube-lego`.
+The service exposes the default nginx deployment. An ingress controller points at the service. The Ingress resource creates an HTTP(S) load balancer, which terminates TLS using [`kube-lego`](https://github.com/jetstack/kube-lego).
 
 ## Getting Started
 

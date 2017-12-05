@@ -1,0 +1,1 @@
+all: program1 program2
