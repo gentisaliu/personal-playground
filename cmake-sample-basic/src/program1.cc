@@ -10,14 +10,10 @@ int main(int argc, char** argv) {
 	cout << cls.show() << endl;
 	
 	cout << "Armadillo version: " << arma_version::as_string() << endl;
-	
-	// random matrixes with values uniformly distributed in the [0,1] interval
 	mat A = randn<mat>(4,4);
 	mat B = randn<mat>(4,4);
-	
+	mat C = A * B;
 	A.print("A:");
 	B.print("B:");
-	
-	mat C = A * B;
 	C.print("AxB:");
 }

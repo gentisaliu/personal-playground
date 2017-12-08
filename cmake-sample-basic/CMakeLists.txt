@@ -4,19 +4,25 @@ cmake_minimum_required(VERSION 2.6)
 # project name
 project(CMakeSampleProject)
 
+option(SAMPLE_BUILD_SRC "Set to ON to build src/" ON)
+
 # enable c++ language
 enable_language(CXX)
 
-# c++ compiler flags for GNU
-if(CMAKE_CXX_COMPILER_ID MATCHES GNU)
+set(SOURCE_FOLDER src)
+
+# c++ compiler flags
+if(MSVC)
+	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /W2")
+elseif(CMAKE_CXX_COMPILER_ID MATCHES GNU)
 	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++17 -Wall")
 endif()
 
-# location of header files
-include_directories(${PROJECT_SOURCE_DIR}/src ${PROJECT_SOURCE_DIR}/include)
+# location of library includes
+include_directories(src include)
 
 # find the armadillo library
-find_library(ARMADILLO_LIBRARY armadillo HINTS ${PROJECT_SOURCE_DIR}/lib/)
+find_library(ARMADILLO_LIBRARY armadillo HINTS lib)
 
 # build executable
 add_executable(program1 src/program1.cc src/test_class_one.cc)

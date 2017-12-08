@@ -3,7 +3,7 @@
 This sample shows the required configuration for CMake that builds two executables, `program1`, `program2`, 
 from source.
 
-Both programs use classes contained in the source code, a header-only library and a static library (.so).
+Both programs use classes contained in the source code, a header-only library and a static library (.so) ([Armadillo linear algebra](https://github.com/conradsnicta/armadillo-code)).
 
 ## Running the sample
 
