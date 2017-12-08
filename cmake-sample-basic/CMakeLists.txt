@@ -13,8 +13,14 @@ if(CMAKE_CXX_COMPILER_ID MATCHES GNU)
 endif()
 
 # location of header files
-include_directories(${PROJECT_SOURCE_DIR}/src ${PROJECT_BINARY_DIR})
+include_directories(${PROJECT_SOURCE_DIR}/src ${PROJECT_SOURCE_DIR}/include)
+
+# find the armadillo library
+find_library(ARMADILLO_LIBRARY armadillo HINTS ${PROJECT_SOURCE_DIR}/lib/)
 
 # build executable
 add_executable(program1 src/program1.cc src/test_class_one.cc)
 add_executable(program2 src/program2.cc src/test_class_two.cc)
+
+# link libraries
+target_link_libraries(program1 ${ARMADILLO_LIBRARY})
