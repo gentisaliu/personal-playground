@@ -1,9 +1,8 @@
 # CMake Basic Sample
 
-This sample shows the required configuration for CMake that builds two executables, `program1`, `program2`, 
-from source.
+This sample shows the required configuration for CMake that builds two executables, `program1`, `program2`, from source.
 
-Both programs use classes contained in the source code, a header-only library and a static library (.so) ([Armadillo linear algebra](https://github.com/conradsnicta/armadillo-code)).
+Both programs use classes contained in the source code, a header-only library ([command line argument parser](https://github.com/jarro2783/cxxopts)) and a shared library ([Armadillo linear algebra](https://github.com/conradsnicta/armadillo-code)).
 
 ## Running the sample
 
@@ -14,7 +13,7 @@ $ cd build
 $ cmake ../
 $ make
 $ ./program1
-$ ./program2
+$ ./program2 --arg=SomeRandomValue
 ```
 
 ## References
