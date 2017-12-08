@@ -1,7 +1,9 @@
 #include <iostream>
+#include <test_class_one.h>
 
 using namespace std;
 
 int main(int argc, char** argv) {
-	cout << "program1" << endl;
+	TestClassOne cls;
+	cout << cls.show() << endl;
 }

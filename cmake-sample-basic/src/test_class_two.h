@@ -4,9 +4,9 @@ class TestClassTwo {
 
  public:
     TestClassTwo();
-	
-	std::string output();
-	
+
+	std::string print() const;
+
  private:
     std::string name;
-}
+};
