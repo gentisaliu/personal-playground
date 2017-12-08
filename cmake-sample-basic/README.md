@@ -6,7 +6,7 @@ Both programs use classes contained in the source code, a header-only library ([
 
 ## System requirements
 
-* Linux OS or Windows 10 with [Linux Bash shell]((https://docs.microsoft.com/en-us/windows/wsl/install-win10))
+* Any Linux-based distro or Windows 10 with [Linux Bash shell](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
 * CMake
 * Make
 
